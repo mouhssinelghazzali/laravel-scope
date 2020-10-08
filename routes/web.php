@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BooksController;
 use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,6 @@ Route::get('welcome', [ WelcomeController::class, 'index'])->name('welcome');
 Route::get('/debug-sentry', function () {
     throw new Exception('My first Sentry error!');
 });
+
+Route::post('/books',[BooksController::class,'store']);
+Route::patch('/books/{book}',[BooksController::class,'update']);

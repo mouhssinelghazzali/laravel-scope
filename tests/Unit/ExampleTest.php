@@ -2,7 +2,12 @@
 
 namespace Tests\Unit;
 
+use App\Models\User;
+use App\Models\Phone;
 use PHPUnit\Framework\TestCase;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
@@ -17,4 +22,6 @@ class ExampleTest extends TestCase
        $result = array_sum($data);
        $this->assertEquals(60,$result);
     }
+
+ 
 }
